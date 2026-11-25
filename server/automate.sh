@@ -141,9 +141,9 @@ services:
     ports:
       - "8001:8001"
     environment:
-      - MONGO_URI=mongodb+srv://<user>:<password>@aiengineer.ofnhmya.mongodb.net/hyperbus?retryWrites=true&w=majority&appName=AIEngineer
+      - MONGO_URI=${MONGO_URI}
       - PORT=8001
-      - JWT_SECRET=avengersassemble
+      - JWT_SECRET=${JWT_SECRET}
     depends_on:
       - elasticsearch
     volumes:
